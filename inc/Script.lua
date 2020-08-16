@@ -2975,7 +2975,7 @@ end
 
 if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس ™') then
 if not msg.SudoBase then return "📛*¦* هذا الامر يخص {المطور الاساسي} فقط  \n🚶" end
-local GetVerison = https.request('https://nizks.github.io/GetVersion.txt') or "0"
+local GetVerison = https.request('https://raw.githubusercontent.com/nizks/NizkFiles/master/GetVersion.txt') or "0"
 GetVerison = GetVerison:gsub("\n",""):gsub(" ","")
 if GetVerison > version then
 UpdateSourceStart = true
@@ -3649,7 +3649,7 @@ end
 
 if MsgText[1] == "متجر الملفات" or MsgText[1]:lower() == "/store"  then
 if not msg.SudoBase then return "📛*¦* هذا الامر يخص {المطور الاساسي} فقط  \n🚶" end
-local Get_Files, res = https.request("https://nizks.github.io/GetFiles.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/nizks/NizkFiles/master/GetFiles.json")
 print(Get_Files)
 print(res)
 if res == 200 then
@@ -3689,7 +3689,7 @@ TText = "📑¦ الملف موجود بالفعل \n🔖¦ تم تحديث ال
 else
 TText = "🔖¦ تم تثبيت وتفعيل الملف بنجاح \n✓"
 end
-local Get_Files, res = https.request("https://raw.githubusercontent.com/nizks/nizks.github.io/master/plugins/"..FileName)
+local Get_Files, res = https.request("https://raw.githubusercontent.com/nizks/NizkFiles/master/master/plugins/"..FileName)
 if res == 200 then
 print("DONLOADING_FROM_URL: "..FileName)
 local FileD = io.open("plugins/"..FileName,'w+')
