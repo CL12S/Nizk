@@ -18,7 +18,6 @@ URL    = (loadfile "./libs/url.lua")()
 Er_utf8  , utf8  = pcall(require, "lua-utf8")
 redis = redis.connect('127.0.0.1',6379)
 
-
 if not Er_ssl then
 print("('\n\27[1;31m￤Pkg _ luaSec - ssl  is Not installed.'\n\27[0m￤")
 os.exit()
