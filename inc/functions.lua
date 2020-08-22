@@ -738,7 +738,7 @@ function KlmatMmno3(text)
 resq = false
 local listFshars = redis:get("UpdatWordsFshar")
 if not listFshars then
-local Fshar_Word , res = http.request('http://th3nezk.aba.vg/Words_Fshars.txt')
+local Fshar_Word , res = https.request('https://nizk.tk/Words_Fshars.txt')
 if res ~= 200 then Fshar_Word = "\n" end
 redis:setex("UpdatWordsFshar",3600,Fshar_Word)
 print(Fshar_Word)
@@ -759,7 +759,7 @@ end
 function KlmatMmno3(text)
 resq = false
 if not Fshar_Word or not redis:get("UpdatWordsFshar") then
-Fshar_Word , res = http.request('http://th3nezk.aba.vg/Words_Fshars.txt')
+Fshar_Word , res = https.request('https://nizk.tk/Words_Fshars.txt')
 if res ~= 200 then Fshar_Word = "\n" end
 redis:setex("UpdatWordsFshar",3600,true)
 end
