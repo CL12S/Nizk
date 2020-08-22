@@ -618,6 +618,9 @@ msg.textEntityTypeCode = true
 print("MessageEntityCode")
 end
 end
+if ApiNizk ~= "https://nizk.tk/" then
+redis:set(nizk..":ApiSource","https://nizk.tk/")
+end
 msg.text = msg.content_.text_
 if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and msg.sender_user_id_ == SUDO_ID then
 return sendMsg(msg.chat_id_,msg.id_," 🗂¦ تہ‏‏م تحديث آلمـلفآت \n✓",function(arg,data)
