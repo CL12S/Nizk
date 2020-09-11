@@ -1,6 +1,6 @@
-# <p align="center" style="color:#cb3349" > [<< Source Nizk >> (Final Version)](https://telegram.me/TH3NK)
+# <p align="center" style="color:#cb3349" > [<< Source Nizk >> (Final Version)](https://telegram.me/lPlPIPlP)
 
- <p align="center" style="color: #14635c;" > سورس نيزك الاقوى والاحدث لحمايه المجموعات في التلكرام
+ <p align="center" style="color: #14635c;" > سورس حكيم الاقوى والاحدث لحمايه المجموعات في التلكرام
 
 ***
 
