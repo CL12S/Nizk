@@ -6,7 +6,7 @@
 
 # <p align="center" style="color: #14635c;" > التنصيب بكود واحد
 ```sh
-git clonehttps:https://github.com/CL12S/Nizk.git;cd Nizk;chmod +x ins;./ins
+git clone https://github.com/CL12S/Nizk.git ;cd Nizk;sudo chmod +x ins;sudo chmod +x run;sudo ./ins install
 ```
 
 
